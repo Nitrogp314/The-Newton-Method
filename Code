@@ -1,1 +1,10 @@
-
+def newton_for(f,df,x,xtol=1e-8,maxiter=100):
+    
+    for i in range(maxiter):
+        passo = f(x)/df(x) 
+        novo_x = x - passo
+        
+        if abs(passo) < xtol :
+            
+            return novo_x
+        x = novo_x
